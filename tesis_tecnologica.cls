@@ -8,6 +8,8 @@
 \usepackage{changepage}      
 \usepackage{enumitem}
 \usepackage[acronym]{glossaries}
+\usepackage{appendix}
+\usepackage{caption}
 
 \setcounter{secnumdepth}{3}
 
@@ -22,12 +24,14 @@
 \titleformat{\subsection}{\bfseries}{\hspace{0.63cm}\alph{subsection}. }{0pt}{}{}
 
 % Redefiniciones
-\renewcommand{\appendix}{\par
-\setcounter{chapter}{0}%
-\setcounter{section}{0}%
-\gdef\@chapapp{\appendixname}%
-\gdef\thechapter{\@Alph\c@chapter}
-\titleformat{\chapter}{\bfseries\centering\LARGE}{\chaptertitlename\space\Alph{chapter}: }{0pt}{}{}
+\renewcommand{\appendix}{
+    \par
+    \setcounter{chapter}{0}%
+    \setcounter{section}{0}%
+    \gdef\@chapapp{\appendixname}%
+    \gdef\thechapter{\@Alph\c@chapter}
+    \captionsetup{list=no}%Images and Tables
+    \titleformat{\chapter}{\bfseries\centering\LARGE}{\chaptertitlename\space\Alph{chapter}: }{0pt}{}{}%TitleFormat
 }
 
 % Estilos de Listas
