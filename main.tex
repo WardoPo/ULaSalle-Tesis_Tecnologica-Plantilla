@@ -15,24 +15,32 @@
 \assessor{Melkian}
 \date{March 2021}
 
+\makeglossaries
+\newglossaryentry{abstract}
+{
+        name=abstarct,
+        description={Voz inglesa que significa ‘breve resumen de un artículo científico, una ponencia o una comunicación, que suele publicarse junto con el texto completo’}
+}
+\newacronym{b}{B}{Flavia Alejandra Cervantes}
+
 \begin{document}
 
 \input{portada}
 
 \begin{dedicatoria}
 A las Rosas, a la Luna.
-Y a Flavia Alejandra Cervantes.
+Y a \acrlong{b}.
 \end{dedicatoria}
 
 \begin{agradecimientos}
-A B.
+A \acrshort{b}.
 \end{agradecimientos}
 
 \tableofcontents
-% Missing list of Abrevviations and Acronyms
+\printglossary[type=\acronymtype]
 \listoffigures
 \listoftables
-% Missing Glossary
+\printglossary
 
 \begin{resumen}
 El resumen posee un conjunto de elementos los cuales dan una visión clara del trabajo. El resumen debe contener lo siguiente: 
@@ -52,6 +60,8 @@ El resumen posee un conjunto de elementos los cuales dan una visión clara del t
 \end{resumen}
 
 \begin{abstract}
+    
+    \Gls{abstract}
     
 \end{abstract}
 

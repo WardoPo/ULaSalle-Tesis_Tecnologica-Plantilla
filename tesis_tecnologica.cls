@@ -7,6 +7,7 @@
 \usepackage{titlesec}
 \usepackage{changepage}      
 \usepackage{enumitem}
+\usepackage[acronym]{glossaries}
 
 % Variables
 
@@ -82,6 +83,12 @@
 }
 {}
 % Babel
+
+\addto{\captionsenglish}{\renewcommand{\acronymname}{Acronyms and Abbreviations}}
+\addto{\captionsspanish}{\renewcommand{\acronymname}{Índice de Abreviaturas y Siglas}}
+
+\addto{\captionsenglish}{\renewcommand{\glossaryname}{Term  Glossary}}
+\addto{\captionsspanish}{\renewcommand{\glossaryname}{Glosario de Términos}}
 
 \addto{\captionsenglish}{\renewcommand{\bibname}{References}}
 \addto{\captionsspanish}{\renewcommand{\bibname}{Referencias}}
