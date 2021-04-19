@@ -9,6 +9,8 @@
 \usepackage{enumitem}
 \usepackage[acronym]{glossaries}
 
+\setcounter{secnumdepth}{3}
+
 % Variables
 
 \def\assessor#1{\gdef\@assessor{#1}}
@@ -18,6 +20,15 @@
 \titleformat{\chapter}{\bfseries\centering\LARGE}{\chaptername\space\Roman{chapter}: }{0pt}{}{}
 \titleformat{\section}{\bfseries}{}{0pt}{}{}
 \titleformat{\subsection}{\bfseries}{\hspace{0.63cm}\alph{subsection}. }{0pt}{}{}
+
+% Redefiniciones
+\renewcommand{\appendix}{\par
+\setcounter{chapter}{0}%
+\setcounter{section}{0}%
+\gdef\@chapapp{\appendixname}%
+\gdef\thechapter{\@Alph\c@chapter}
+\titleformat{\chapter}{\bfseries\centering\LARGE}{\chaptertitlename\space\Alph{chapter}: }{0pt}{}{}
+}
 
 % Estilos de Listas
 \setlist[itemize]{left=1.25cm .. 2.5cm}
@@ -82,8 +93,8 @@
     \chapter*{Conclusiones}
 }
 {}
-% Babel
 
+% Babel
 \addto{\captionsenglish}{\renewcommand{\acronymname}{Acronyms and Abbreviations}}
 \addto{\captionsspanish}{\renewcommand{\acronymname}{Índice de Abreviaturas y Siglas}}
 
