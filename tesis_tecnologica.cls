@@ -86,6 +86,7 @@
 {
     \subsection{#1}
     \begin{adjustwidth}{1.25cm}{}
+    \addtolength{\textwidth}{-1.25cm}
     \setlist[itemize]{left=0cm .. 1.25cm}
 }
 {
