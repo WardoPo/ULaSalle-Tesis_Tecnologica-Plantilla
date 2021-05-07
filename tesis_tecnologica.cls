@@ -43,6 +43,10 @@
 
 \setlist[description]{before={\setcounter{descriptcount}{0}},font=\normalfont\stepcounter{descriptcount}\thedescriptcount)\qquad\quad,leftmargin = 0cm}
 
+\renewcommand{\descriptionlabel}[1]{%
+  \hspace\labelsep \upshape\bfseries #1:%
+}
+
 \setlength{\parindent}{0pt}
 
 % Ambientes
@@ -90,6 +94,7 @@
     \setlist[itemize]{left=0cm .. 1.25cm}
 }
 {
+    \addtolength{\textwidth}{1.25cm}
     \end{adjustwidth}
 }
 
